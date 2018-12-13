@@ -119,15 +119,16 @@ def parse_args_and_train():
 
     train(
         save_dir=args.save_dir,
+        data_dir=args.data_dir,
         args=args
     )
 
 
-def train(save_dir, args=None):
+def train(save_dir, data_dir, args=None):
     if not args:
         args = arg_parser().parse_args([])
 
-    data_loader = TextLoader(args.data_dir, args.batch_size, args.seq_length)
+    data_loader = TextLoader(data_dir, args.batch_size, args.seq_length)
     args.vocab_size = data_loader.vocab_size
 
     # check compatibility if training is continued from previously saved model
