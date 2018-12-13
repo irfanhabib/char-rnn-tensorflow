@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 SamJackson@gmail.com
+=======
+>>>>>>> bd8a195123dece8e6177ad885a8fcc06b07f72ed
 Amari8@hotmail.com
 Justen.Koch31@hotmail.com
 Frederik.Conroy80@hotmail.com
