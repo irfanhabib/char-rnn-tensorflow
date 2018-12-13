@@ -114,7 +114,7 @@ class Model():
 
         ret = prime
         char = prime[-1]
-        for _ in range(num):
+        while True:
             x = np.zeros((1, 1))
             x[0, 0] = vocab[char]
             feed = {self.input_data: x, self.initial_state: state}
@@ -134,4 +134,6 @@ class Model():
             pred = chars[sample]
             ret += pred
             char = pred
+            if ret.count('\n') >= num:
+                break
         return ret
